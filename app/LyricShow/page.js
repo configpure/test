@@ -1,8 +1,7 @@
 
 import './show.css'
-
-let track_name = 'Lowest In Me'
-let artist_name = 'Staind'
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 async function getData(trakname , artistname) {
@@ -60,6 +59,8 @@ export default async function Show({ searchParams }) {
                 <img className="bg-color album-artwork"
                      src={data.image}/>
             </div>
+            <SpeedInsights />
+            <Analytics />
 
         </div>
     );

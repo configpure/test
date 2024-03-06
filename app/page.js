@@ -6,7 +6,7 @@ import wave from './wave.png'
 import emoji from './dayandnight.png'
 import Image from "next/image";
 import React from 'react';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 function Home() {
@@ -60,6 +60,8 @@ function Home() {
                     <div className='twitter' id='twitter'>Twitter</div>
                 </div>
             </footer>
+            <SpeedInsights />
+            <Analytics />
 
         </div>
     );
