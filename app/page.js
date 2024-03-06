@@ -1,95 +1,90 @@
+'use client'
+
+import './home.css'
+import wave from  './wave.png'
+import emoji from './emoji.png'
 import Image from "next/image";
-import styles from "./page.module.css";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+let theme = 'white'
+function changetheme() {
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    if (theme === 'white') {
+        document.getElementById('Heros').style.color = 'white';
+        document.getElementById('Heross').style.color = 'white';
+        document.getElementById('main').style.backgroundColor = 'black';
+        document.getElementById('button').style.backgroundColor = 'black';
+        document.getElementById('hero1').style.color= 'white';
+        document.getElementById('hero2').style.color = 'white';
+        document.getElementById('name').style.color = 'white';
+        document.getElementById('name2').style.color = 'white';
+        document.getElementById('social').style.backgroundColor = '#1e1e1e';
+        document.getElementById('songname').style.backgroundColor = '#1e1e1e';
+        document.getElementById('artistname').style.backgroundColor = '#1e1e1e';
+        document.getElementById('instagram').style.color = 'white';
+        document.getElementById('twitter').style.color = 'white';
+        document.getElementById('copright').style.color = 'white';
+        theme = 'black'
+    } else if (theme === 'black') {
+        document.getElementById('Heros').style.color = 'black';
+        document.getElementById('Heross').style.color = 'black';
+        document.getElementById('main').style.backgroundColor = 'white';
+        document.getElementById('button').style.backgroundColor = 'white';
+        document.getElementById('hero1').style.color= 'black';
+        document.getElementById('hero2').style.color = 'black';
+        document.getElementById('name').style.color = 'black';
+        document.getElementById('name2').style.color = 'black';
+        document.getElementById('social').style.backgroundColor = '#F2F2F2';
+        document.getElementById('songname').style.backgroundColor = '#F2F2F2';
+        document.getElementById('artistname').style.backgroundColor = '#F2F2F2';
+        document.getElementById('instagram').style.color = 'black';
+        document.getElementById('twitter').style.color = 'black';
+        document.getElementById('copright').style.color = 'black';
+        theme = 'white'
+    }
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+
 }
+function Home() {
+
+
+
+    return (
+        <div className="main" id='main'>
+
+            <header>
+                <a className='Heros' id='Heros' href='/'>Lyric</a>
+                <button id='button' onClick={changetheme}>  <Image src={emoji} alt={'heelo'} height={32} width={32} />  </button>
+                <a className='Heros' id='Heross' href='/'>Show</a>
+            </header>
+
+            <main>
+                <div className="hero" id='hero1'>The <span>easiest</span></div>
+                <div className="hero" id='hero2'>lyrics finder</div>
+                <Image className='wave' src={wave} alt={'heelo'}/>
+                <div className="inputs">
+                    <p id='name'>Artist Name : </p>
+                    <input id='artistname'/>
+                    <p id='name2' >Track Name : </p>
+                    <input id='songname'/>
+                    <button className='bang' id='bang'>Bang!</button>
+                </div>
+            </main>
+
+            <footer id='social'>
+                <div className="copright" id='copright'>
+                    © LyricShow Team. 2024
+                </div>
+                <div className="social">
+                    <div className='instagram' id='instagram'>Instagram</div>
+                    <div className='twitter' id='twitter'>Twitter</div>
+                </div>
+            </footer>
+
+        </div>
+    );
+}
+
+export default Home;
