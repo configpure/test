@@ -1,63 +1,33 @@
-'use client'
-
+"use client"
+import Link from 'next/link'
 import './home.css'
-import wave from  './wave.png'
-import emoji from './emoji.png'
+import wave from './wave.png'
+import emoji from './dayandnight.png'
 import Image from "next/image";
-
-let theme = 'white'
-function changetheme() {
-
-    if (theme === 'white') {
-        document.getElementById('Heros').style.color = 'white';
-        document.getElementById('Heross').style.color = 'white';
-        document.getElementById('main').style.backgroundColor = 'black';
-        document.getElementById('button').style.backgroundColor = 'black';
-        document.getElementById('hero1').style.color= 'white';
-        document.getElementById('hero2').style.color = 'white';
-        document.getElementById('name').style.color = 'white';
-        document.getElementById('name2').style.color = 'white';
-        document.getElementById('social').style.backgroundColor = '#1e1e1e';
-        document.getElementById('songname').style.backgroundColor = '#1e1e1e';
-        document.getElementById('artistname').style.backgroundColor = '#1e1e1e';
-        document.getElementById('instagram').style.color = 'white';
-        document.getElementById('twitter').style.color = 'white';
-        document.getElementById('copright').style.color = 'white';
-        theme = 'black'
-    } else if (theme === 'black') {
-        document.getElementById('Heros').style.color = 'black';
-        document.getElementById('Heross').style.color = 'black';
-        document.getElementById('main').style.backgroundColor = 'white';
-        document.getElementById('button').style.backgroundColor = 'white';
-        document.getElementById('hero1').style.color= 'black';
-        document.getElementById('hero2').style.color = 'black';
-        document.getElementById('name').style.color = 'black';
-        document.getElementById('name2').style.color = 'black';
-        document.getElementById('social').style.backgroundColor = '#F2F2F2';
-        document.getElementById('songname').style.backgroundColor = '#F2F2F2';
-        document.getElementById('artistname').style.backgroundColor = '#F2F2F2';
-        document.getElementById('instagram').style.color = 'black';
-        document.getElementById('twitter').style.color = 'black';
-        document.getElementById('copright').style.color = 'black';
-        theme = 'white'
-    }
+import React from 'react';
 
 
 
-
-
-}
 function Home() {
 
+    const [artistname, setartistname] = React.useState('artistname');
+    const [trackname, settrackname] = React.useState('trackname');
+    const artist = event => {
+        setartistname(event.target.value)
+    }
+    const track = events => {
+        settrackname(events.target.value)
+    }
 
 
     return (
         <div className="main" id='main'>
 
             <header>
-                <a className='Heros' id='Heros' href='/'>Lyric</a>
-                <button id='button' onClick={changetheme}>  <Image src={emoji} alt={'heelo'} height={32} width={32} />  </button>
-                <a className='Heros' id='Heross' href='/'>Show</a>
+                
+                <a className='Heros' id='Heros' href='/public'>Lyric</a>
+                <Image src={emoji} alt={'heelo'} height={32} width={32} />
+                <a className='Heros' id='Heross' href='/public'>Show</a>
             </header>
 
             <main>
@@ -66,10 +36,17 @@ function Home() {
                 <Image className='wave' src={wave} alt={'heelo'}/>
                 <div className="inputs">
                     <p id='name'>Artist Name : </p>
-                    <input id='artistname'/>
+                    <input id='artistname' value={artistname} onChange={artist} />
                     <p id='name2' >Track Name : </p>
-                    <input id='songname'/>
-                    <button className='bang' id='bang'>Bang!</button>
+                    <input id='songname' value={trackname} onChange={track}  />
+                    <Link className='bang' id='bang'
+                        href={{
+                            pathname: '/LyricShow',
+                            query: { artistname: `${artistname}`, trakname: `${trackname}` } // the data
+                        }}
+                    >
+                        Bang!
+                    </Link>
                 </div>
             </main>
 
