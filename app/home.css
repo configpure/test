@@ -155,3 +155,10 @@ button {
     font-style: normal;
     font-size: 1.3rem;
 }
+
+@media screen and (min-width: 640px) {
+    body {
+        width: 640px;
+        height: 900px;
+    }
+}
