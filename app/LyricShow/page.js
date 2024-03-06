@@ -31,6 +31,7 @@ export default async function Show({ searchParams }) {
 
     return (
         <div className="frame">
+            <Analytics />
 
             <header className="frame-header">
                 <div className="image">
@@ -60,7 +61,7 @@ export default async function Show({ searchParams }) {
                      src={data.image}/>
             </div>
             <SpeedInsights />
-            <Analytics />
+            
 
         </div>
     );

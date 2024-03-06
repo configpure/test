@@ -23,6 +23,7 @@ function Home() {
 
     return (
         <div className="main" id='main'>
+            <Analytics />
 
             <header>
                 
@@ -61,7 +62,6 @@ function Home() {
                 </div>
             </footer>
             <SpeedInsights />
-            <Analytics />
 
         </div>
     );
