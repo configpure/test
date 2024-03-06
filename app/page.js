@@ -1,4 +1,5 @@
 "use client"
+import { Analytics } from "@vercel/analytics/react"
 import Link from 'next/link'
 import './home.css'
 import wave from './wave.png'
