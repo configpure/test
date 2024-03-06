@@ -33,7 +33,7 @@ function Home() {
             </header>
 
             <main>
-                <div className="hero" id='hero1'>The <span>easiest</span></div>
+                <div className="hero" id='hero1'>The <span>simplest</span></div>
                 <div className="hero" id='hero2'>lyrics finder</div>
                 <Image className='wave' src={wave} alt={'heelo'}/>
                 <div className="inputs">
