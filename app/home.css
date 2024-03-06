@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Bebas+Neue&family=Vazirmatn:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Bebas+Neue&family=Vazirmatn:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Vazirmatn:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Bebas+Neue&family=Nunito+Sans:ital,opsz,wght@0,6..12,1000;1,6..12,1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Vazirmatn:wght@100..900&display=swap');
 
@@ -112,6 +111,12 @@ input {
     height: 60px;
     width: 300px;
     margin-bottom: 15px;
+    font-family: "Vazirmatn", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-align: center;
+    font-style: normal;
+    font-size: 1.3rem;
 }
 
 input:focus {
@@ -140,16 +145,13 @@ button {
     border-radius: 8px;
     padding: 10px 20px;
     height: 50px;
-    width: 100px;
+    width: 180px;
+    text-align: center;
     background-color: #F2F2F2;
     align-self: center;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Vazirmatn", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
-    font-variation-settings:
-            "wdth" 100,
-            "YTLC" 500;
-    margin-bottom: 10px;
     font-size: 1.3rem;
 }

@@ -49,7 +49,7 @@ export default async function Show({ searchParams }) {
                 {lyric.map(function(data) {
                     return (
                         // eslint-disable-next-line react/jsx-key
-                        <div>
+                        <div className='lyrics_text'>
                             {data}
                         </div>
                     )

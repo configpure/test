@@ -37,16 +37,16 @@ function Home() {
                 <Image className='wave' src={wave} alt={'heelo'}/>
                 <div className="inputs">
                     <p id='name'>Artist Name : </p>
-                    <input id='artistname' value={artistname} onChange={artist} />
+                    <input id='artistname' placeholder="اسم خواننده" onChange={artist} />
                     <p id='name2' >Track Name : </p>
-                    <input id='songname' value={trackname} onChange={track}  />
+                    <input id='songname' placeholder="اسم آهنگ" onChange={track}  />
                     <Link className='bang' id='bang'
                         href={{
                             pathname: '/LyricShow',
                             query: { artistname: `${artistname}`, trakname: `${trackname}` } // the data
                         }}
                     >
-                        Bang!
+                        جستجوی آهنگ
                     </Link>
                 </div>
             </main>

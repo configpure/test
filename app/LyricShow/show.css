@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Bebas+Neue&family=Vazirmatn:wght@100..900&display=swap');
+
+
 html,
 body {
     height: 100dvh;
@@ -88,7 +91,12 @@ body {
 
 }
 
-
+.lyrics_text {
+    font-family: "Vazirmatn", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
 
 
 
